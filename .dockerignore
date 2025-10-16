@@ -1,0 +1,10 @@
+.git
+.docker
+.env
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+node_modules
+vendor
+storage/*.key
+*.log
