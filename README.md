@@ -1,6 +1,8 @@
 ## Manager Customer API
 
 Uma API RESTful desenvolvida em Laravel para gerenciamento de clientes, produtos e favoritos, com autenticação via Sanctum e documentação Swagger integrada.
+
+
 📋 Descrição do Projeto
 
 O **Manager Customer** é uma aplicação backend que oferece:
