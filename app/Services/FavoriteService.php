@@ -25,7 +25,6 @@ class FavoriteService implements FavoriteServiceInterface
                 throw new ModelNotFoundException("Product not found in external API.");
             }
 
-            // Verificar se já está nos favoritos
             if ($this->isProductInFavorites($dto->customer_id, $dto->product_id)) {
                 throw new \Exception("This product is already in your favorites.");
             }
@@ -49,7 +48,6 @@ class FavoriteService implements FavoriteServiceInterface
                 throw new ModelNotFoundException("Favorite not found.");
             }
 
-            // Buscar detalhes do produto antes de excluir
             $product = $this->productService->getProductById($favorite->product_id);
             $productTitle = $product ? $product->title : 'Product';
             

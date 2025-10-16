@@ -105,7 +105,7 @@ class CustomerServiceTest extends TestCase
         $customerService = $this->createCustomerServiceWithMocks([
             'getCustomerFavorites' => [
                 'times' => 2,
-                'with' => [Mockery::any()], // Aceita qualquer parâmetro
+                'with' => [Mockery::any()],
                 'return' => function($customerId) use ($customer1) {
                     return $customerId === $customer1->id ? collect([1, 2]) : collect();
                 }

@@ -15,15 +15,7 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
-    {
-        // if ($this->app->environment('testing')) {
-        //     $this->app->bind(ProductServiceInterface::class, function () {
-        //         return new \Tests\Unit\Services\ProductServiceMock();
-        //     });
-        // } else {
-        //     $this->app->bind(ProductServiceInterface::class, ProductService::class);
-        // }
-        
+    {        
         $this->app->bind(AuthServiceInterface::class, AuthService::class);
         $this->app->bind(CustomerServiceInterface::class, CustomerService::class);
         $this->app->bind(ProductServiceInterface::class, ProductService::class);
